@@ -1,0 +1,5 @@
+import hashlib
+
+def calculate_hash(block):
+    block_data = str(block.data) + str(block.previous_hash)
+    return hashlib.sha256(block_data.encode()).hexdigest()
